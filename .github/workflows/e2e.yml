@@ -1,0 +1,14 @@
+name: E2E Tests
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Event inputs
+        run: echo ${{github.event.inputs}}
+      - name: Pause for 15 seconds
+        run: |
+          sleep 15
